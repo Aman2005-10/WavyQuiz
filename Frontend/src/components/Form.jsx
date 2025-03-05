@@ -23,7 +23,7 @@ function Form({formLogged}) {
   async function handleSignUp(e) {
     e.preventDefault();
     try {
-    const response =   await axios.post("http://localhost:5100/signup", user);
+    const response =   await axios.post("https://wavy-quiz-api.vercel.app//signup", user);
       setMessage("User Create Successfully");
     } catch (error) {
       console.error("Signup Error:", error);
@@ -34,7 +34,7 @@ function Form({formLogged}) {
   async function handleLogin(e) {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5100/login", {
+      const response = await axios.post("https://wavy-quiz-api.vercel.app//login", {
         username: user.username,
         password: user.password,
       });
