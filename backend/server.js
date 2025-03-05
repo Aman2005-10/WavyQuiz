@@ -7,7 +7,13 @@ const app = new express();
 
 app.use(express.json());
 
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://wavy-quiz-frontend.vercel.app/"],
+        methods:["POST" , "GET"],
+        credentials:true
+    }
+));
 
 mongoose.connect("mongodb+srv://sharpinnovation10:jVPwJY2euEiPZVud@cluster0.ng1my.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 const db = mongoose.connection;
