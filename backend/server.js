@@ -14,7 +14,7 @@ app.use(cors({
 }));
 
 // ✅ MongoDB Connection with Error Handling
-mongoose.connect("mongodb+srv://sharpinnovation10:jVPwJY2euEiPZVud@cluster0.ng1my.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("mongodb+srv://sharpinnovation10:cluster0.ng1my.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.error("MongoDB Connection Error:", err));
 
