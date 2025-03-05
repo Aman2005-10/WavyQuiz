@@ -22,6 +22,10 @@ app.listen(5100 , () => {
     console.log('server is running on port 5100');
     });
 
+app.get("/" , (req , res) => {
+    res.json("HEllo");
+})
+
     db.on("open" , () => {
         console.log('connected to database');
     })
